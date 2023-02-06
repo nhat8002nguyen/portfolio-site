@@ -1,9 +1,9 @@
-import { notFound } from 'next/navigation';
-import { Mdx } from 'components/mdx';
-import { allBlogs } from 'contentlayer/generated';
-import { getTweets } from 'lib/twitter';
-import Balancer from 'react-wrap-balancer';
-import ViewCounter from '../view-counter';
+import { Mdx } from "components/mdx";
+import { allBlogs } from "contentlayer/generated";
+import { getTweets } from "lib/twitter";
+import { notFound } from "next/navigation";
+import Balancer from "react-wrap-balancer";
+import ViewCounter from "../view-counter";
 
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
@@ -20,7 +20,9 @@ export async function generateMetadata({ params }) {
     image,
     slug,
   } = post;
-  const ogImage = image ? image : `https://leerob.io/api/og?title=${title}`;
+  const ogImage = image
+    ? image
+    : `${process.env.BASE_URL}/api/og?title=${title}`;
 
   return {
     title,
@@ -28,9 +30,9 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      type: 'article',
+      type: "article",
       publishedTime,
-      url: `https://leerob.io/blog/${slug}`,
+      url: `${process.env.BASE_URL}/blog/${slug}`,
       images: [
         {
           url: ogImage,

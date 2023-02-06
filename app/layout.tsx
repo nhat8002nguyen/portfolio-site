@@ -1,20 +1,20 @@
-import './global.css';
-import clsx from 'clsx';
-import localFont from '@next/font/local';
-import Sidebar from '../components/sidebar';
-import AnalyticsWrapper from '../components/analytics';
+import localFont from "@next/font/local";
+import clsx from "clsx";
+import AnalyticsWrapper from "../components/analytics";
+import Sidebar from "../components/sidebar";
+import "./global.css";
 
 const kaisei = localFont({
-  src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
-  weight: '700',
-  variable: '--font-kaisei',
-  display: 'swap',
+  src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
+  weight: "700",
+  variable: "--font-kaisei",
+  display: "swap",
 });
 
 export const metadata = {
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: "Nhat Nguyen",
+    template: "%s | Nhat Nguyen",
   },
   robots: {
     index: true,
@@ -22,21 +22,21 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   twitter: {
-    title: 'Lee Robinson',
-    card: 'summary_large_image',
+    title: "Nhat Nguyen",
+    card: "summary_large_image",
   },
   icons: {
-    shortcut: '/favicon.ico',
+    shortcut: "/favicon.jpg",
   },
   verification: {
-    google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    yandex: '14d2e73487fa6c71',
+    google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
+    yandex: "14d2e73487fa6c71",
   },
 };
 
@@ -49,7 +49,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'text-black bg-white dark:text-white dark:bg-[#111010]',
+        "text-black bg-white dark:text-white dark:bg-[#111010]",
         kaisei.variable
       )}
     >

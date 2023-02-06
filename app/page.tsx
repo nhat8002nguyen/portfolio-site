@@ -1,30 +1,30 @@
-import Image from 'next/image';
-import { getBlogViews, getTweetCount, getStarCount } from 'lib/metrics';
 import {
   ArrowIcon,
   GitHubIcon,
   TwitterIcon,
   ViewsIcon,
-} from 'components/icons';
-import { name, about, bio, avatar } from 'lib/info';
+} from "components/icons";
+import { about, avatar, bio, name } from "lib/info";
+import { getBlogViews, getStarCount, getTweetCount } from "lib/metrics";
+import Image from "next/image";
 
 export const revalidate = 60;
 export const metadata = {
-  description: 'Developer, writer, and creator.',
+  description: "Developer, writer, and creator.",
   openGraph: {
-    title: 'Lee Robinson',
-    description: 'Developer, writer, and creator.',
-    url: 'https://leerob.io',
-    siteName: 'Lee Robinson',
+    title: "Nhat Nguyen",
+    description: "Developer, writer, and creator.",
+    url: "https://nathanNguyen.io",
+    siteName: "Nhat Nguyen",
     images: [
       {
-        url: 'https://leerob.io/og.jpg',
+        url: "https://nathanNguyen.io/og.jpg",
         width: 1920,
         height: 1080,
       },
     ],
-    locale: 'en-US',
-    type: 'website',
+    locale: "en-US",
+    type: "website",
   },
 };
 
@@ -50,7 +50,7 @@ export default async function HomePage() {
       <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
         <Image
           alt={name}
-          className="rounded-full grayscale"
+          className="rounded-full"
           src={avatar}
           placeholder="blur"
           width={100}
@@ -80,10 +80,10 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://twitter.com/Nhat8002nguyen"
           >
             <ArrowIcon />
-            <p className="h-7">follow me on twitter</p>
+            <p className="h-7">Follow me on twitter</p>
           </a>
         </li>
         <li>
@@ -91,10 +91,10 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://leerob.substack.com"
+            href="https://nathanng.substack.com"
           >
             <ArrowIcon />
-            <p className="h-7">get email updates</p>
+            <p className="h-7">Get email updates</p>
           </a>
         </li>
       </ul>

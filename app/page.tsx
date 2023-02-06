@@ -9,24 +9,24 @@ import { getBlogViews, getStarCount, getTweetCount } from "lib/metrics";
 import Image from "next/image";
 
 export const revalidate = 60;
-export const metadata = {
-  description: "Developer, writer, and creator.",
-  openGraph: {
-    title: "Nhat Nguyen",
-    description: "Developer, writer, and creator.",
-    url: "https://nathanNguyen.io",
-    siteName: "Nhat Nguyen",
-    images: [
-      {
-        url: "https://nathanNguyen.io/og.jpg",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
-  },
-};
+// export const metadata = {
+//   description: "Developer, writer, and creator.",
+//   openGraph: {
+//     title: "My Website",
+//     description: "Developer, writer, and creator.",
+//     url: "https://nathanNguyen.io",
+//     siteName: "Nhat Nguyen",
+//     images: [
+//       {
+//         url: "https://nathanNguyen.io/og.jpg",
+//         width: 1920,
+//         height: 1080,
+//       },
+//     ],
+//     locale: "en-US",
+//     type: "website",
+//   },
+// };
 
 export default async function HomePage() {
   let starCount, views, tweetCount;
